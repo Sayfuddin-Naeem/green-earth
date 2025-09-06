@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+@theme{
+
+  /* color */
+  --color-accent: #15803D;
+  --color-accent-02: #FACC15;
+  --color-bg-hero: #CFF0DC;
+  --color-bg-body: #F0FDF4;
+  --color-bg-badge: #DCFCE7;
+  --color-bg-footer: #166534;
+  --color-bg-footer-02: #14532D;
+  --color-dark-01: #1F2937;
+  
+
+  /* font  */
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base{
+  html {
+        font-size: 62.5%;
+        /* For 1rem = 10px base */
+  }
+
+  *,
+  *::before,
+  *::after{
+    color: var(--color-dark-01);
+    font-family: var(--font-inter);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+    box-sizing: border-box;
+  }
+}

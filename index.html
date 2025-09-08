@@ -90,7 +90,7 @@
         </figure>
 
         <div class="">
-          <p class="leading-[2.4rem] text-[1.4rem] lg:text[1.6rem] text-center text-dark-02 lg:text-left mb-8">
+          <p class="leading-[2.4rem] text-[1.4rem] lg:text[1.6rem] text-dark-02 text-justify mb-8">
             Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we've planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.
           </p>
           <ul class="list-disc list-inside leading-[2.4rem] text-dark-02">
@@ -129,6 +129,35 @@
   </section>
   
   <!-- ========== End impact Section ========== -->
+
+  <!-- ========== Start donation Section ========== -->
+  
+  <section class="bg-bg-footer px-[7.04%] lg:px-0 py-30 lg:py-40 flex flex-col justify-center items-center gap-16">
+    <h2 class="mb-16 font-semibold text-white text-[1.8rem] sm:text-[2.8rem] xxl:text-[3.2rem]">Plant a Tree Today</h2>
+    <div class="bg-main p-16 rounded-[1.2rem]  lg:w-[33.85%]">
+      <form action="" class="flex flex-col gap-[1.2rem]">
+        <div class="">
+          <input type="text" id="name" class="input input-xl w-full rounded-[0.6rem] py-4 px-[1.2rem] border border-[#e4e4e7] focus:border-amber-300 focus:outline-[0.15rem] focus:outline-main-02" placeholder="Your Name">
+        </div>
+        <div class="">
+          <input type="email" id="email" class="input input-xl w-full rounded-[0.6rem] py-4 px-[1.2rem] border border-[#e4e4e7] focus:border-amber-300 focus:outline-[0.15rem] focus:outline-main-02" placeholder="Your Email Address">
+        </div>
+        <div class="">
+          <select id="numberOfTree" class="select select-xl w-full rounded-[0.6rem] py-4 px-[1.2rem] border border-[#e4e4e7] focus:border-amber-300 focus:outline-[0.15rem] focus:outline-main-02">
+            <option disabled selected>Number of Trees</option>
+            <option value="crimson">Crimson</option>
+          </select>
+        </div>
+        <div class="mt-8">
+          <button class="btn btn-xl h-18 w-full border-0 rounded-full text-main bg-main-02 font-medium">
+            Donate Now
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <!-- ========== End donation Section ========== -->
 
   <script type="module" src="./src/main.js"></script>
 </body>

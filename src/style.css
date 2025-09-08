@@ -5,8 +5,8 @@
 @theme{
 
   /* color */
-  --color-accent: #15803D;
-  --color-accent-02: #FACC15;
+  --color-main: #15803D;
+  --color-main-02: #FACC15;
   --color-bg-hero: #CFF0DC;
   --color-bg-body: #F0FDF4;
   --color-bg-badge: #DCFCE7;

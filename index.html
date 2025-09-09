@@ -13,7 +13,7 @@
 
   <title>Green Earth</title>
 </head>
-<body>
+<body class="selection:bg-green-400 selection:text-white">
   <!-- ========== Start header Section ========== -->
   
   <header class="">
@@ -57,7 +57,7 @@
         <img src="./images/hero-leaf1.png" alt="hero section leaf image" class="">
       </figure>
       <div class="flex flex-col items-center justify-center">
-        <h1 class="text-center font-bold leading-19.5 text-4xl lg:text-[3.4rem] xxl:text-[4.8rem]">
+        <h1 class="text-center font-bold leading-19.5 text-4xl lg:text-[3.4rem] 2xl:text-[4.8rem]">
           Plant a Tree, Grow a Future
         </h1>
         <p class="text-center text-dark-02 text-[1.4rem] sm:text-[1.6rem] leading-9.5 mt-[0.8rem] mb-[2.4rem]">
@@ -77,11 +77,57 @@
 
   <!-- ========== Start main Section ========== -->
   
-  <main class="bg-bg-body py-40 px-[7.04%]">
+  <main class="bg-bg-body py-30 lg:py-40 px-[7.04%]">
+
+    <!-- ========== Start trees Section ========== -->
+    
+    <section class="flex flex-col justify-center items-center mb-30 lg:mb-40">
+      <h2 class="font-semibold text-[1.8rem] sm:text-[2.8rem] 2xl:text-[3.2rem] leading-16 mb-16">
+        Choose Your Trees
+      </h2>
+      <div class="grid grid-cols-[1fr_4fr_1fr] gap-6">
+        <!-- ========== Start category Section ========== -->
+        
+        <aside class="">
+          <h3 class="text-black font-semibold text-[1.8rem] lg:text-[2rem]  mb-6.5">Categories</h3>
+          <ul id="categoryContainer" class="flex flex-col gap-8">
+            <li class="active-category w-full px-4 py-3.5 cursor-pointer font-medium text-[1.4rem] lg:text-[1.6rem]">
+              All Trees
+            </li>
+            <li class="">
+              <a href="" class="">
+                Fruit Trees
+              </a>
+            </li>
+            <li class="">
+              <a href="" class="">
+                Flowering Trees
+              </a>
+            </li>
+            <li class="">
+              <a href="" class="">
+                Shade Trees
+              </a>
+            </li>
+          </ul>
+        </aside>
+
+        <template id="categoryTemplate">
+          <li id="catVal" class="w-full px-4 py-3.5 cursor-pointer font-medium text-[1.4rem] lg:text-[1.6rem]"></li>
+        </template>
+        
+        <!-- ========== End category Section ========== -->
+        
+        
+      </div>
+    </section>
+    
+    <!-- ========== End trees Section ========== -->
+
     <!-- ========== Start campaign Section ========== -->
     
-    <section class="flex flex-col items-center justify-center sm:px-[12%] xxl:px-[21.62%]">
-      <h2 class="font-semibold text-[1.8rem] sm:text-[2.8rem] xxl:text-[3.2rem] leading-16 mb-16">
+    <section class="flex flex-col items-center justify-center sm:px-[12%] 2xl:px-[21.62%]">
+      <h2 class="font-semibold text-[1.8rem] sm:text-[2.8rem] 2xl:text-[3.2rem] leading-16 mb-16">
         About the Campaign
       </h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-12">
@@ -110,19 +156,19 @@
 
   <!-- ========== Start impact Section ========== -->
   
-  <section class="bg-bg-hero px-[7.04%] py-40 flex flex-col justify-center items-center">
-    <h2 class="font-semibold  text-[1.8rem] sm:text-[2.8rem] xxl:text-[3.2rem] leading-16 mb-16">Our Impact</h2>
+  <section class="bg-bg-hero px-[7.04%] py-30 lg:py-40 flex flex-col justify-center items-center">
+    <h2 class="font-semibold  text-[1.8rem] sm:text-[2.8rem] 2xl:text-[3.2rem] leading-16 mb-16">Our Impact</h2>
     <div class="grid grid-col-1 lg:grid-cols-3 gap-20">
-      <div class="text-center bg-white p-16 rounded-[1.2rem] shadow-impact w-[33rem] xxl:w-[51.67rem] h-62.5">
-        <p class="text-main font-semibold text-[1.8rem] sm:text-[2.8rem] xxl:text-[3.2rem] mb-[1.2rem]">500K+</p>
+      <div class="impact-card">
+        <p class="text-main font-semibold text-[1.8rem] sm:text-[2.8rem] 2xl:text-[3.2rem] mb-[1.2rem]">500K+</p>
         <p class="text-dark-02 text-[1.4rem] sm:text-[1.6rem] leading-[2.4rem]">Trees Planted</p>
       </div>
-      <div class="text-center bg-white p-16 rounded-[1.2rem] shadow-impact w-[33rem] xxl:w-[51.67rem] h-62.5">
-        <p class="text-main font-semibold text-[1.8rem] sm:text-[2.8rem] xxl:text-[3.2rem] mb-[1.2rem]">120+</p>
+      <div class="impact-card">
+        <p class="text-main font-semibold text-[1.8rem] sm:text-[2.8rem] 2xl:text-[3.2rem] mb-[1.2rem]">120+</p>
         <p class="text-dark-02 text-[1.4rem] sm:text-[1.6rem] leading-[2.4rem]">Communities Involved</p>
       </div>
-      <div class="text-center bg-white p-16 rounded-[1.2rem] shadow-impact w-[33rem] xxl:w-[51.67rem] h-62.5">
-        <p class="text-main font-semibold text-[1.8rem] sm:text-[2.8rem] xxl:text-[3.2rem] mb-[1.2rem]">30+</p>
+      <div class="impact-card">
+        <p class="text-main font-semibold text-[1.8rem] sm:text-[2.8rem] 2xl:text-[3.2rem] mb-[1.2rem]">30+</p>
         <p class="text-dark-02 text-[1.4rem] sm:text-[1.6rem] leading-[2.4rem]">Countries Reached</p>
       </div>
     </div>
@@ -133,7 +179,7 @@
   <!-- ========== Start donation Section ========== -->
   
   <section class="bg-bg-footer px-[7.04%] lg:px-0 py-30 lg:py-40 flex flex-col justify-center items-center gap-16">
-    <h2 class="mb-16 font-semibold text-white text-[1.8rem] sm:text-[2.8rem] xxl:text-[3.2rem]">Plant a Tree Today</h2>
+    <h2 class="mb-16 font-semibold text-white text-[1.8rem] sm:text-[2.8rem] 2xl:text-[3.2rem]">Plant a Tree Today</h2>
     <div class="bg-main p-16 rounded-[1.2rem]  lg:w-[33.85%]">
       <form action="" class="flex flex-col gap-[1.2rem]">
         <div class="">
@@ -145,7 +191,10 @@
         <div class="">
           <select id="numberOfTree" class="select select-xl w-full rounded-[0.6rem] py-4 px-[1.2rem] border border-[#e4e4e7] focus:border-amber-300 focus:outline-[0.15rem] focus:outline-main-02">
             <option disabled selected>Number of Trees</option>
-            <option value="crimson">Crimson</option>
+            <option value="500">1 Tree - ৳500</option>
+            <option value="2500">5 Tree - ৳2500</option>
+            <option value="5000">10 Tree - ৳5000</option>
+            <option value="10000">20 Tree - ৳10000</option>
           </select>
         </div>
         <div class="mt-8">

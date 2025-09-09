@@ -13,7 +13,8 @@
   --color-bg-footer: #166534;
   --color-bg-footer-02: #14532D;
   --color-dark-01: #1F2937;
-  --color-dark-02: #1f2937cc;;
+  --color-dark-02: rgb(31, 41, 55, 0.8);
+  --color-dark-03: rgb(31, 41, 55, 0.5);
   
 
   /* font  */
@@ -38,5 +39,19 @@
     line-height: 1.5;
     letter-spacing: 0.1rem;
     box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .active-category {
+    @apply rounded-[0.4rem] bg-main text-white font-medium shadow-md transition-colors duration-300 ease-in-out hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400;
+  }
+
+  .addToCardBtn{
+    @apply btn btn-xl w-full h-17.5 rounded-full bg-main text-white font-medium transition-colors duration-300 ease-in-out hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400;
+  }
+  
+  .impact-card{
+    @apply text-center bg-white transition-colors duration-300 ease-in-out hover:bg-green-100 p-16 rounded-[1.2rem] shadow-impact w-[33rem] 2xl:w-[51.67rem] h-62.5;
   }
 }

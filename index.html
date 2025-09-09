@@ -305,7 +305,38 @@
         
         <!-- ========== End trees card Section ========== -->
         
+        <!-- ========== Start add to cart Section ========== -->
         
+        <aside class="bg-white rounded-[1.6rem] p-[1.6rem]">
+          <h3 class="text-black font-semibold text-[1.8rem] lg:text-[2rem]  mb-6.5">Your Cart</h3>
+          <div id="cartElemContainer" class="">
+            <div class="bg-bg-body px-[1.2rem] py-[0.8rem] rounded-[0.8rem] flex justify-between items-center">
+              <div class="">
+                <h3 class="text-[1.4rem] font-semibold">Mango Tree</h3>
+                <p class="text-dark-03">৳500 x 1</p>
+              </div>
+              <p class="text-slate-400 cursor-pointer font-bold">X</p>
+            </div>
+          </div>
+        </aside>
+
+        <!-- ========== Start cart template Section ========== -->
+        
+        <template id="cartElemTemplate">
+          <div id="cartElemValue" class="bg-bg-body w-full px-[1.2rem] py-[0.8rem] rounded-[0.8rem] flex justify-between items-center">
+            <div class="">
+              <h3 class="treeTitle text-[1.4rem] font-semibold"></h3>
+              <p class="text-dark-03">
+                ৳<span class="cartElemPrice"></span> x <span class="cartElemQuantity"></span>
+              </p>
+            </div>
+            <p class="cartElemClose text-slate-400 cursor-pointer font-bold">X</p>
+          </div>
+        </template>
+        
+        <!-- ========== End cart template Section ========== -->
+        
+        <!-- ========== End add to cart Section ========== -->
       </div>
     </section>
     

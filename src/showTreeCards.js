@@ -1,9 +1,17 @@
 import { getDataFromAPI } from "./getDataFromAPI";
+import { handleTreeCardEvents } from "./handleTreeCardEvents";
 
+const treeSection = document.querySelector('#treeSection');
 const cardContainer = document.querySelector('#cardContainer');
 const cardTemplate = document.querySelector('#cardTemplate');
 
 export const showTreeCard = async () => {
+    const dotLoader = document.createElement('span');
+    dotLoader.className = "loading loading-dots loading-xl my-8";
+    cardContainer.innerHTML = "";
+    treeSection.insertBefore(dotLoader, cardContainer);
+
+
     const apiUrl = "https://openapi.programming-hero.com/api/plants";
     const apiData = await getDataFromAPI(apiUrl);
     const allTree = apiData.plants;
@@ -16,6 +24,7 @@ export const showTreeCard = async () => {
                 const {id, image, name, description, category, price} = curTree;
 
                 const curCard = treeCard.querySelector('#cardValue');
+
                 curCard.setAttribute('id', `treeCard-${id}`);
                 curCard.addEventListener('click', (ev) => {
                     handleTreeCardEvents(ev, id);
@@ -28,7 +37,8 @@ export const showTreeCard = async () => {
                 treeCard.querySelector('.cardCategory').textContent = category;
                 treeCard.querySelector('.cardPrice').textContent = `৳${price}`;
 
-                // cardContainer.append(treeCard);
+                dotLoader.remove();
+                cardContainer.append(treeCard);
             }
         });
     }

@@ -85,12 +85,12 @@
     <dialog id="treeDetails" class="modal">
       <div class="modal-box w-6/12 max-w-160  flex flex-col gap-6">
         <h3 id="modalTitle" class="text-3xl font-bold"></h3>
-        <figure class="w-full">
+        <figure class="w-full h-80 overflow-hidden">
           <img
             id="modalImage"
             src=""
             alt=""
-            class="w-full rounded-[0.8rem]" />
+            class="w-full h-full object-cover object-center rounded-[0.8rem]" />
         </figure>
         <p class="font-bold">Category: <span id="modalCategory" class="text-dark-02 font-normal"></span></p>
         <p class="font-bold">Price: <span id="modalPrice" class="text-dark-02 font-normal"></span></p>
@@ -98,7 +98,7 @@
         <div class="modal-action">
           <form method="dialog">
             <!-- if there is a button in form, it will close the modal -->
-            <button class="btn">Close</button>
+            <button class="btn btn-xl bg-main-02 text-white rounded-2xl">Close</button>
           </form>
         </div>
       </div>
@@ -147,16 +147,19 @@
         
         <!-- ========== Start trees card Section ========== -->
         
-        <article id="cardContainer" class="grid grid-cols-[repeat(auto-fill,minmax(31rem,1fr))] gap-6">
+        <article id="treeSection" class="flex flex-col items-center">
 
+          <div id="cardContainer" class="grid grid-cols-[repeat(auto-fill,minmax(31rem,1fr))] gap-6">
+
+          </div>
 
         </article>
         <!-- ========== Start card template Section ========== -->
         
         <template id="cardTemplate">
           <div id="cardValue" class="card bg-base-100 shadow">
-            <figure class="w-full h-145 overflow-hidden">
-              <img class="cardImage w-full h-full object-cover object-top" src="" alt="" />
+            <figure class="w-full h-100 overflow-hidden">
+              <img class="cardImage w-full h-full object-cover object-center" src="" alt="" />
             </figure>
             <div class="card-body flex flex-col gap-4">
               <h3 class="card-title cursor-pointer font-semibold lg:text-[1.8rem]"></h3>

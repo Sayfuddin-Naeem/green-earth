@@ -79,6 +79,33 @@
   
   <main class="bg-bg-body py-30 lg:py-40 px-[7.04%]">
 
+    <!-- ========== Start modal for tree Section ========== -->
+    
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="treeDetails" class="modal">
+      <div class="modal-box w-6/12 max-w-160  flex flex-col gap-6">
+        <h3 id="modalTitle" class="text-3xl font-bold"></h3>
+        <figure class="w-full">
+          <img
+            id="modalImage"
+            src=""
+            alt=""
+            class="w-full rounded-[0.8rem]" />
+        </figure>
+        <p class="font-bold">Category: <span id="modalCategory" class="text-dark-02 font-normal"></span></p>
+        <p class="font-bold">Price: <span id="modalPrice" class="text-dark-02 font-normal"></span></p>
+        <p class="font-bold">Description: <span id="modalDescription" class="text-dark-02 font-normal"></span></p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    
+    <!-- ========== End modal for tree Section ========== -->
+
     <!-- ========== Start trees Section ========== -->
     
     <section class="flex flex-col justify-center items-center mb-30 lg:mb-40">
@@ -121,159 +148,18 @@
         <!-- ========== Start trees card Section ========== -->
         
         <article id="cardContainer" class="grid grid-cols-[repeat(auto-fill,minmax(31rem,1fr))] gap-6">
-          
-          <div class="card bg-base-100 shadow">
-            <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes" />
-            </figure>
-            <div class="card-body flex flex-col gap-4">
-              <h3 class="card-title font-semibold lg:text-[1.8rem]">
-                Card Title
-              </h3>
-              <p class="text-[1.4rem] text-dark-02">A card component has a figure, a body part, and inside body there are title and actions parts</p>
-              <div class="flex justify-between w-full">
-                <span class="badge badge-xl badge-outline badge-success rounded-full h-10 text-[1.4rem]">Fruit Tree</span>
-                <p class="text-right font-semibold text-[1.4rem]">৳500</p>
-              </div>
-              <div class="flex gap-0 items-center">
-                <p id="productProperty" class="text-[1.4rem] font-semibold">
-                  Total Stocks Available:
-                  <span id="productStock" class="ml-4 text-[1.4rem] font-semibold">20</span>
-                </p>
-              </div>
 
-              <div class="flex items-center gap-4">
-                <p class="productProperty text-[1.4rem] font-semibold">Quantity(Pieces)</p>
-                <div class="stockElement grid grid-cols-3 items-center text-center border-2 border-green-200 rounded-[0.8rem]">
-                  <button id="cartIncrement" class="bg-transparent text-dark-02 text-[1.4rem] font-bold px-8 py-2.5 cursor-pointer border-0 border-r border-r-green-200 rounded-0">+</button>
-                  <p id="productQuantity" class="text-dark-02 text-[1.4rem] font-bold" data-quantity="1">1</p>
-                  <button id="cartDecrement" class="bg-transparent text-dark-02 text-[1.4rem] font-bold px-8 py-2.5 cursor-pointer  border-0 border-l border-l-green-200 rounded-0">-</button>
-                </div>
-              </div>
-              <div class="card-actions justify-end mt-5">
-                <button class="addToCardBtn">Add To Cart</button>
-              </div>
-            </div>
-          </div>
 
-          <div class="card bg-base-100 shadow">
-            <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes" />
-            </figure>
-            <div class="card-body flex flex-col gap-4">
-              <h3 class="card-title font-semibold lg:text-[1.8rem]">
-                Card Title
-              </h3>
-              <p class="text-[1.4rem] text-dark-02">A card component has a figure, a body part, and inside body there are title and actions parts</p>
-              <div class="flex justify-between w-full">
-                <span class="badge badge-xl badge-outline badge-success rounded-full h-10 text-[1.4rem]">Fruit Tree</span>
-                <p class="text-right font-semibold text-[1.4rem]">৳500</p>
-              </div>
-              <div class="flex gap-0 items-center">
-                <p id="productProperty" class="text-[1.4rem] font-semibold">
-                  Total Stocks Available:
-                  <span id="productStock" class="ml-4 text-[1.4rem] font-semibold">20</span>
-                </p>
-              </div>
-
-              <div class="flex items-center">
-                <p class="productProperty text-[1.4rem] font-semibold">Quantity(Pieces)</p>
-                <div class="stockElement grid grid-cols-3 items-center text-center border-2 border-green-200 rounded-[0.8rem]">
-                  <button id="cartIncrement" class="bg-transparent text-dark-02 text-[1.4rem] font-bold px-8 py-2.5 cursor-pointer border-0 border-r border-r-green-200 rounded-0">+</button>
-                  <p id="productQuantity" class="text-dark-02 text-[1.4rem] font-bold" data-quantity="1">1</p>
-                  <button id="cartDecrement" class="bg-transparent text-dark-02 text-[1.4rem] font-bold px-8 py-2.5 cursor-pointer  border-0 border-l border-l-green-200 rounded-0">-</button>
-                </div>
-              </div>
-              <div class="card-actions justify-end mt-5">
-                <button class="addToCardBtn">Add To Cart</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="card bg-base-100 shadow">
-            <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes" />
-            </figure>
-            <div class="card-body flex flex-col gap-4">
-              <h3 class="card-title font-semibold lg:text-[1.8rem]">
-                Card Title
-              </h3>
-              <p class="text-[1.4rem] text-dark-02">A card component has a figure, a body part, and inside body there are title and actions parts</p>
-              <div class="flex justify-between w-full">
-                <span class="badge badge-xl badge-outline badge-success rounded-full h-10 text-[1.4rem]">Fruit Tree</span>
-                <p class="text-right font-semibold text-[1.4rem]">৳500</p>
-              </div>
-              <div class="flex gap-0 items-center">
-                <p id="productProperty" class="text-[1.4rem] font-semibold">
-                  Total Stocks Available:
-                  <span id="productStock" class="ml-4 text-[1.4rem] font-semibold">20</span>
-                </p>
-              </div>
-
-              <div class="flex items-center">
-                <p class="productProperty text-[1.4rem] font-semibold">Quantity(Pieces)</p>
-                <div class="stockElement grid grid-cols-3 items-center text-center border-2 border-green-200 rounded-[0.8rem]">
-                  <button id="cartIncrement" class="bg-transparent text-dark-02 text-[1.4rem] font-bold px-8 py-2.5 cursor-pointer border-0 border-r border-r-green-200 rounded-0">+</button>
-                  <p id="productQuantity" class="text-dark-02 text-[1.4rem] font-bold" data-quantity="1">1</p>
-                  <button id="cartDecrement" class="bg-transparent text-dark-02 text-[1.4rem] font-bold px-8 py-2.5 cursor-pointer  border-0 border-l border-l-green-200 rounded-0">-</button>
-                </div>
-              </div>
-              <div class="card-actions justify-end mt-5">
-                <button class="addToCardBtn">Add To Cart</button>
-              </div>
-            </div>
-          </div>
-          <div class="card bg-base-100 shadow">
-            <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes" />
-            </figure>
-            <div class="card-body flex flex-col gap-4">
-              <h3 class="card-title font-semibold lg:text-[1.8rem]">
-                Card Title
-              </h3>
-              <p class="text-[1.4rem] text-dark-02">A card component has a figure, a body part, and inside body there are title and actions parts</p>
-              <div class="flex justify-between w-full">
-                <span class="badge badge-xl badge-outline badge-success rounded-full h-10 text-[1.4rem]">Fruit Tree</span>
-                <p class="text-right font-semibold text-[1.4rem]">৳500</p>
-              </div>
-              <div class="flex gap-0 items-center">
-                <p id="productProperty" class="text-[1.4rem] font-semibold">
-                  Total Stocks Available:
-                  <span id="productStock" class="ml-4 text-[1.4rem] font-semibold">20</span>
-                </p>
-              </div>
-
-              <div class="flex items-center">
-                <p class="productProperty text-[1.4rem] font-semibold">Quantity(Pieces)</p>
-                <div class="stockElement grid grid-cols-3 items-center text-center border-2 border-green-200 rounded-[0.8rem]">
-                  <button id="cartIncrement" class="bg-transparent text-dark-02 text-[1.4rem] font-bold px-8 py-2.5 cursor-pointer border-0 border-r border-r-green-200 rounded-0">+</button>
-                  <p id="productQuantity" class="text-dark-02 text-[1.4rem] font-bold" data-quantity="1">1</p>
-                  <button id="cartDecrement" class="bg-transparent text-dark-02 text-[1.4rem] font-bold px-8 py-2.5 cursor-pointer  border-0 border-l border-l-green-200 rounded-0">-</button>
-                </div>
-              </div>
-              <div class="card-actions justify-end mt-5">
-                <button class="addToCardBtn">Add To Cart</button>
-              </div>
-            </div>
-          </div>
         </article>
         <!-- ========== Start card template Section ========== -->
         
         <template id="cardTemplate">
-          <div id="cardValue" class="card bg-base-100 w-137.5 shadow">
-            <figure>
-              <img class="cardImage" src="" alt="" />
+          <div id="cardValue" class="card bg-base-100 shadow">
+            <figure class="w-full h-145 overflow-hidden">
+              <img class="cardImage w-full h-full object-cover object-top" src="" alt="" />
             </figure>
             <div class="card-body flex flex-col gap-4">
-              <h3 class="cardTitle card-title font-semibold lg:text-[1.8rem]"></h3>
+              <h3 class="card-title cursor-pointer font-semibold lg:text-[1.8rem]"></h3>
               <p class="cardDescription text-[1.4rem] text-dark-02"></p>
               <div class="flex justify-between w-full">
                 <span class="cardCategory badge badge-xl badge-outline badge-success rounded-full h-10 text-[1.4rem]"></span>
@@ -327,7 +213,7 @@
             <div class="">
               <h3 class="treeTitle text-[1.4rem] font-semibold"></h3>
               <p class="text-dark-03">
-                ৳<span class="cartElemPrice"></span> x <span class="cartElemQuantity"></span>
+                ৳<span class="cartElemPrice text-dark-03"></span> x <span class="cartElemQuantity text-dark-03"></span>
               </p>
             </div>
             <p class="cartElemClose text-slate-400 cursor-pointer font-bold">X</p>

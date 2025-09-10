@@ -5,7 +5,7 @@ export const showTreeDetailsModal = async (treeId) => {
     const apiData = await getDataFromAPI(apiUrl);
     const tree = apiData.plants;
 
-    console.log(tree, treeId);
+    // console.log(tree, treeId);
 
     
     if(tree){

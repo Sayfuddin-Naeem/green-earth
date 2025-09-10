@@ -41,5 +41,8 @@ export const showTreeCard = async () => {
                 cardContainer.append(treeCard);
             }
         });
+        return true;
     }
+
+    return false;
 };

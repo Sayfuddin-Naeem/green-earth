@@ -5,14 +5,17 @@ const treeSection = document.querySelector('#treeSection');
 const cardContainer = document.querySelector('#cardContainer');
 const cardTemplate = document.querySelector('#cardTemplate');
 
-export const showTreeCard = async () => {
+export const showTreeCard = async (id = "0") => {
     const dotLoader = document.createElement('span');
     dotLoader.className = "loading loading-dots loading-xl my-8";
     cardContainer.innerHTML = "";
     treeSection.insertBefore(dotLoader, cardContainer);
 
 
-    const apiUrl = "https://openapi.programming-hero.com/api/plants";
+    let apiUrl = "https://openapi.programming-hero.com/api/plants";
+    if(id !== "0"){
+        apiUrl = `https://openapi.programming-hero.com/api/category/${id}`;
+    }
     const apiData = await getDataFromAPI(apiUrl);
     const allTree = apiData.plants;
 

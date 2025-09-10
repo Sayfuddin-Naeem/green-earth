@@ -1,0 +1,18 @@
+import { setCategorySlug } from "./setCategorySlug";
+import { showTreeCard } from "./showTreeCards";
+import { toggleActiveCatClass } from "./toggleActiveCatClass";
+
+
+export const showCategoryWiseTree = (ev, categoryContainer, catName) => {
+    const curCategory = ev.target;
+    
+    if(curCategory.classList[0] === 'category'){
+        toggleActiveCatClass(curCategory, categoryContainer);
+
+        const catId = curCategory.getAttribute('data-id');
+        const catSlug = curCategory.getAttribute('data-slug');
+
+        setCategorySlug(catSlug);
+        showTreeCard(catId);
+    }
+};

@@ -31,12 +31,13 @@ export const showTreeCard = async (id = 0) => {
             
             if(treeCard){
                 const {id, image, name, description, category, price} = curTree;
+                const stock = getRandomNumber(20, 50);
 
                 const curCard = treeCard.querySelector('#cardValue');
 
                 curCard.setAttribute('id', `treeCard-${id}`);
                 curCard.addEventListener('click', (ev) => {
-                    handleTreeCardEvents(ev, id);
+                    handleTreeCardEvents(ev, id, stock);
                 });
 
                 treeCard.querySelector('.cardImage').src = image;
@@ -44,7 +45,7 @@ export const showTreeCard = async (id = 0) => {
                 treeCard.querySelector('.card-title').textContent = name;
                 treeCard.querySelector('.cardDescription').textContent = description;
                 treeCard.querySelector('.cardCategory').textContent = category;
-                treeCard.querySelector('.treeStock').textContent = getRandomNumber(20, 50);
+                treeCard.querySelector('.treeStock').textContent = stock;
                 treeCard.querySelector('.cardPrice').textContent = `৳${price}`;
 
                 dotLoader.remove();

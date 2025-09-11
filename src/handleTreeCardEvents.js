@@ -1,7 +1,8 @@
+import { handleTreeQuantity } from "./handleTreeQuantity";
 import { showTreeDetailsModal } from "./showTreeDetailsModal";
 
 
-export const handleTreeCardEvents = (ev, id) => {
+export const handleTreeCardEvents = (ev, id, stock) => {
     const targetClass = ev.target.classList[0];
     const targetCard = document.querySelector(`#treeCard-${id}`);
 
@@ -10,8 +11,8 @@ export const handleTreeCardEvents = (ev, id) => {
             showTreeDetailsModal(id);
         }
 
-        if(targetClass === ""){
-            
+        if(targetClass === "quantityIncrement" || targetClass === "quantityDecrement"){
+            handleTreeQuantity(targetClass, targetCard, stock);
         }
     }
 };

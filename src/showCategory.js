@@ -16,8 +16,8 @@ export const showCategory = async () => {
     const allCategory = apiData.categories;
 
     if(allCategory){
-        const allTreesCat = document.createElement('li');
-        allTreesCat.className = "category w-full px-4 py-3.5 cursor-pointer font-medium text-[1.4rem] lg:text-[1.6rem] active-category";
+        const allTreesCat = document.importNode(categoryTemplate.content, true).querySelector('li');
+        allTreesCat.classList.add("active-category");
         allTreesCat.setAttribute('data-id', '0');
         allTreesCat.setAttribute('data-slug', 'all-trees/0');
         allTreesCat.textContent = "All Trees";

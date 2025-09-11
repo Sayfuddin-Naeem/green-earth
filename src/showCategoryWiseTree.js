@@ -3,7 +3,7 @@ import { showTreeCard } from "./showTreeCards";
 import { toggleActiveCatClass } from "./toggleActiveCatClass";
 
 
-export const showCategoryWiseTree = (ev, categoryContainer, catName) => {
+export const showCategoryWiseTree = (ev, categoryContainer) => {
     const curCategory = ev.target;
     
     if(curCategory.classList[0] === 'category'){

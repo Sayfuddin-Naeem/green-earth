@@ -9,5 +9,9 @@ export const handleTreeCardEvents = (ev, id) => {
         if(targetClass === "card-title"){
             showTreeDetailsModal(id);
         }
+
+        if(targetClass === ""){
+            
+        }
     }
 };

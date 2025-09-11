@@ -1,3 +1,4 @@
+import { handleAddToCard } from "./handleAddToCard";
 import { handleTreeQuantity } from "./handleTreeQuantity";
 import { showTreeDetailsModal } from "./showTreeDetailsModal";
 
@@ -11,8 +12,12 @@ export const handleTreeCardEvents = (ev, id, stock) => {
             showTreeDetailsModal(id);
         }
 
-        if(targetClass === "quantityIncrement" || targetClass === "quantityDecrement"){
+        else if(targetClass === "quantityIncrement" || targetClass === "quantityDecrement"){
             handleTreeQuantity(targetClass, targetCard, stock);
+        }
+
+        else if(targetClass === "addToCardBtn"){
+            handleAddToCard(targetCard, id, stock);
         }
     }
 };

@@ -179,17 +179,28 @@
         
         <!-- ========== Start add to cart Section ========== -->
         
-        <aside class="bg-white rounded-[1.6rem] p-[1.6rem]">
+        <aside id="cartSection" class="flex flex-col items-center bg-white rounded-[1.6rem] p-[1.6rem]">
           <h3 class="text-black font-semibold text-[1.8rem] lg:text-[2rem]  mb-6.5">Your Cart</h3>
-          <div id="cartElemContainer" class="">
-            <div class="bg-bg-body px-[1.2rem] py-[0.8rem] rounded-[0.8rem] flex justify-between items-center">
-              <div class="">
-                <h3 class="text-[1.4rem] font-semibold">Mango Tree</h3>
-                <p class="text-dark-03">৳500 x 1</p>
-              </div>
-              <p class="text-slate-400 cursor-pointer font-bold">X</p>
-            </div>
+          <div id="cartElemContainer" class="flex flex-col gap-4">
+            
           </div>
+          <section class="productCartTotalElem">
+            <div class="productOrderTotal">
+              <div class="flex justify-between gap-4">
+                  <p class="text-dark-02 text-[1.4rem]">Sub Total:</p>
+                  <p id="productSubTotal" class="text-dark-02 text-[1.4rem]"></p>
+              </div>
+              <div class="flex justify-between gap-4">
+                  <p class="text-dark-02 text-[1.4rem]">Tax:</p>
+                  <p id="productTax" class="text-dark-02 text-[1.4rem]">৳50</p>
+              </div>
+              <hr class="" />
+              <div class="flex justify-between gap-4">
+                  <p class="text-dark-02 text-[1.4rem]">Total:</p>
+                  <p class="productFinalTotal text-dark-02 text-[1.4rem]"></p>
+              </div>
+            </div>
+          </section>
         </aside>
 
         <!-- ========== Start cart template Section ========== -->
@@ -202,7 +213,7 @@
                 ৳<span class="cartElemPrice text-dark-03"></span> x <span class="cartElemQuantity text-dark-03"></span>
               </p>
             </div>
-            <p class="cartElemClose text-slate-400 cursor-pointer font-bold">X</p>
+            <p class="cartElemClose text-slate-400 hover:text-red-400 cursor-pointer font-bold">X</p>
           </div>
         </template>
         

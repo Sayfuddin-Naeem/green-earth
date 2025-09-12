@@ -15,17 +15,22 @@
     2. forEach(): forEach is a method of array, which perform some task on each array element by applying a callback function. It does not return a new array. It can modify the original array.
     <br/>
     3. filter(): filter is a method of array, which creates new array based on condition by applying a callback function. It return a new filtered array. It does not modify the original array.
+    
 ---
 
 ### 3) What are arrow functions in ES6? <br/>
 
 #### Ans:
+    Arrow functions: It is a shorter and cleaner way of define a function in javascript. It is different some cases than normal function. It does not has own this binding and prototype property. It does not have arguments object. It does not able to perform as constructor.
+    
+    Example - const add = (a, b) => a+b ;
 
 ---
 
 ### 4) How does destructuring assignment work in ES6? <br/>
 
 #### Ans:
+    Destructuring: Destructuring is a way of unpacking values from array or object into different variables easily and shortly.Array destructuring is extracted values by position. Object destructuring is extracted values by property name. It supports default values, renaming, nesting and rest operator.
 
 ---
 

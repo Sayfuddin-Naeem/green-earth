@@ -37,6 +37,7 @@
 ### 5) Explain template literals in ES6. How are they different from string concatenation? <br/>
 
 #### Ans:
+    Template literals: Template literals is a way to define strings with backticks (`) without using single(') or double(") quotation. It support insert variables directly by dollar($) sign and curly({}) brackets without using plus (+) operator. It able to embed any mathematical expression. It is supported multiline strings.
 
 
 

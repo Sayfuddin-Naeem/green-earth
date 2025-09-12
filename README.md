@@ -1,7 +1,9 @@
 ### 1) What is the difference between var, let, and const? <br/>
 
 #### Ans: <br/>
-
+1. var: It is a function scoped. When it is declared outside of the function, then it becomes global variable. It is hoisted and initialized with undefined. It is allowed re-declaration in same scope.It is allowed re-assigning a variable.<br/>
+2. let: It is a block scoped keyword of function declaration. It is safer than var keyword. It is hoisted but not initialized. It does not support accessing before declaration. It does not allowed re-declaration in the same scope. It is allowed re-assigning.<br/>
+3. const: It is a block scope keyword like let. It is hoisted like let keyword. It does not support re-declaration and re-assigning. But non-primitive data like array and object can modify.
 
 ---
 

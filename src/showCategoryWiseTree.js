@@ -12,7 +12,6 @@ export const showCategoryWiseTree = (ev, categoryContainer) => {
         const catId = curCategory.getAttribute('data-id');
         const catSlug = curCategory.getAttribute('data-slug');
 
-        setCategorySlug(catSlug);
         showTreeCard(catId);
     }
 };

@@ -40,11 +40,4 @@
    Template literals: Template literals is a way to define strings with backticks (`) without using single(') or double(") quotation. It support insert variables directly by dollar($) sign and curly({}) brackets without using plus (+) operator. It able to embed any mathematical expression. It is supported multiline strings.
 
 
-
-
-
-## 🔗 Submission
-- **Live Link :** YOUR_DEPLOYED_URL_HERE  
-- **GitHub Private Repository:** YOUR_REPO_URL_HERE  
-
 ---

@@ -112,7 +112,7 @@
       <h2 class="font-semibold text-[1.8rem] sm:text-[2.8rem] 2xl:text-[3.2rem] leading-16 mb-16">
         Choose Your Trees
       </h2>
-      <div class="grid grid-cols-[1fr_4fr_1fr] gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_4fr_1fr] gap-6">
         <!-- ========== Start category Section ========== -->
         
         <aside id="categorySection" class="">
@@ -184,20 +184,22 @@
           <div id="cartElemContainer" class="flex flex-col gap-4">
             
           </div>
-          <section class="productCartTotalElem">
-            <div class="productOrderTotal">
+
+          <!-- tree cart total  -->
+          <section class="treeCartTotalElem hidden mt-6 ">
+            <div class="treeOrderTotal flex flex-col gap-3">
               <div class="flex justify-between gap-4">
                   <p class="text-dark-02 text-[1.4rem]">Sub Total:</p>
-                  <p id="productSubTotal" class="text-dark-02 text-[1.4rem]"></p>
+                  <p id="treeSubTotal" class="text-dark-02 text-[1.4rem]"></p>
               </div>
               <div class="flex justify-between gap-4">
                   <p class="text-dark-02 text-[1.4rem]">Tax:</p>
-                  <p id="productTax" class="text-dark-02 text-[1.4rem]">৳50</p>
+                  <p id="treeTax" class="text-dark-02 text-[1.4rem]">৳50</p>
               </div>
               <hr class="" />
               <div class="flex justify-between gap-4">
                   <p class="text-dark-02 text-[1.4rem]">Total:</p>
-                  <p class="productFinalTotal text-dark-02 text-[1.4rem]"></p>
+                  <p id="treeFinalTotal" class="text-dark-02 text-[1.4rem]"></p>
               </div>
             </div>
           </section>

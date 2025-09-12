@@ -1,3 +1,4 @@
+import { calculateCartTotal } from "./calculateCartTotal";
 import { getCartDataFromLS } from "./getCartDataFromLS";
 import { removeCart } from "./removeCart";
 
@@ -34,7 +35,8 @@ export const showCartData = () => {
                 cartElemContainer.append(cloneCartElem);
             }
         });
-        
+        calculateCartTotal();
+
         return true;
     }
     

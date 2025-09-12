@@ -114,8 +114,30 @@
       </h2>
       <div class="grid grid-cols-1 lg:grid-cols-[1fr_4fr_1fr] gap-6">
         <!-- ========== Start category Section ========== -->
+
+        <!-- ========== Start for mobile Section ========== -->
         
-        <aside id="categorySection" class="">
+        <div class="lg:hidden px-[7.04%]">
+          <div class="collapse collapse-arrow border border-base-300 bg-base-100">
+            <input type="checkbox" class="peer" />
+            <div class="collapse-title text-[1.6rem] font-semibold">
+              Select a Category
+            </div>
+            <div class="collapse-content">
+              <aside id="categorySection-m" class="">
+                <h3 class="text-black font-semibold text-[1.8rem] lg:text-[2rem]  mb-6.5">Categories</h3>
+                <ul id="categoryContainer-m" class="flex flex-col gap-8">
+                              
+                </ul>
+              </aside>
+            </div>
+          </div>
+
+        </div>
+        
+        <!-- ========== End for mobile Section ========== -->
+        
+        <aside id="categorySection" class="hidden lg:block">
           <h3 class="text-black font-semibold text-[1.8rem] lg:text-[2rem]  mb-6.5">Categories</h3>
           <ul id="categoryContainer" class="flex flex-col gap-8">
                         
@@ -179,30 +201,32 @@
         
         <!-- ========== Start add to cart Section ========== -->
         
-        <aside id="cartSection" class="flex flex-col items-center bg-white rounded-[1.6rem] p-[1.6rem]">
-          <h3 class="text-black font-semibold text-[1.8rem] lg:text-[2rem]  mb-6.5">Your Cart</h3>
-          <div id="cartElemContainer" class="flex flex-col gap-4">
-            
-          </div>
-
-          <!-- tree cart total  -->
-          <section class="treeCartTotalElem hidden mt-6 ">
-            <div class="treeOrderTotal flex flex-col gap-3">
-              <div class="flex justify-between gap-4">
-                  <p class="text-dark-02 text-[1.4rem]">Sub Total:</p>
-                  <p id="treeSubTotal" class="text-dark-02 text-[1.4rem]"></p>
-              </div>
-              <div class="flex justify-between gap-4">
-                  <p class="text-dark-02 text-[1.4rem]">Tax:</p>
-                  <p id="treeTax" class="text-dark-02 text-[1.4rem]">৳50</p>
-              </div>
-              <hr class="" />
-              <div class="flex justify-between gap-4">
-                  <p class="text-dark-02 text-[1.4rem]">Total:</p>
-                  <p id="treeFinalTotal" class="text-dark-02 text-[1.4rem]"></p>
-              </div>
+        <aside class="hidden lg:block">
+          <div id="cartSection" class="flex flex-col items-center bg-white rounded-[1.6rem] p-[1.6rem]">
+            <h3 class="text-black font-semibold text-[1.8rem] lg:text-[2rem]  mb-6.5">Your Cart</h3>
+            <div id="cartElemContainer" class="flex flex-col gap-4">
+              
             </div>
-          </section>
+
+            <!-- tree cart total calculation  -->
+            <section class="treeCartTotalElem hidden mt-6 ">
+              <div class="treeOrderTotal">
+                <div class="flex justify-between gap-4 mb-3">
+                    <p class="text-dark-02 text-[1.4rem]">Sub Total:</p>
+                    <p id="treeSubTotal" class="text-dark-02 text-[1.4rem]"></p>
+                </div>
+                <div class="flex justify-between gap-4">
+                    <p class="text-dark-02 text-[1.4rem]">Tax:</p>
+                    <p id="treeTax" class="text-dark-02 text-[1.4rem]">৳50</p>
+                </div>
+                <div class="divider"></div>
+                <div class="flex justify-between gap-4 mt-0">
+                    <p class="text-dark-02 text-[1.4rem]">Total:</p>
+                    <p id="treeFinalTotal" class="text-dark-02 text-[1.4rem]"></p>
+                </div>
+              </div>
+            </section>
+          </div>
         </aside>
 
         <!-- ========== Start cart template Section ========== -->
@@ -308,6 +332,7 @@
       </form>
     </div>
   </section>
+
   
   <!-- ========== End donation Section ========== -->
 

@@ -1,15 +1,26 @@
 import { getDataFromAPI } from "./getDataFromAPI";
 import { showCategoryWiseTree } from "./showCategoryWiseTree";
 
+const mobileCatSection = document.querySelector('#categorySection-m');
+const mobileCatContainer = document.querySelector('#categoryContainer-m');
 const categorySection = document.querySelector('#categorySection');
 const categoryContainer = document.querySelector('#categoryContainer');
 const categoryTemplate = document.querySelector('#categoryTemplate');
 
+const mediaQuery = window.matchMedia("(min-width: 768px)");
+
 export const showCategory = async () => {
     const barLoader = document.createElement('span');
     barLoader.className = "loading loading-bars loading-xl my-8";
+    mobileCatContainer.innerHTML = "";
     categoryContainer.innerHTML = "";
-    categorySection.insertBefore(barLoader, categoryContainer);
+
+    if(mediaQuery.matches){
+        categorySection.insertBefore(barLoader, categoryContainer);
+    }
+    else{
+        mobileCatSection.insertBefore(barLoader, mobileCatContainer);
+    }
 
     const apiUrl = "https://openapi.programming-hero.com/api/categories";
     const apiData = await getDataFromAPI(apiUrl);
@@ -24,7 +35,11 @@ export const showCategory = async () => {
 
 
         barLoader.remove();
-        categoryContainer.append(allTreesCat);
+        if(mediaQuery.matches){
+            categoryContainer.append(allTreesCat);
+        }else{
+            mobileCatContainer.append(allTreesCat);
+        }
 
         allCategory.forEach(curCategory => {
             const cloneCategory = document.importNode(categoryTemplate.content, true);
@@ -39,12 +54,21 @@ export const showCategory = async () => {
                 categoryElem.setAttribute('data-slug', slug);
                 categoryElem.textContent = category_name;
 
-                categoryContainer.append(cloneCategory);
+                if(mediaQuery.matches){
+                    categoryContainer.append(cloneCategory);
+                }else{
+                    mobileCatContainer.append(cloneCategory);
+                }
             }
         });
 
         categoryContainer.addEventListener('click', (ev) => {
-            showCategoryWiseTree(ev, categoryContainer);
+            
+            if(mediaQuery.matches){
+                showCategoryWiseTree(ev, categoryContainer);
+            }else{
+                showCategoryWiseTree(ev, mobileCatContainer);
+            }
         });
 
         return true;

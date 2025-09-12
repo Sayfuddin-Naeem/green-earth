@@ -1,25 +1,27 @@
 import { getCartDataFromLS } from "./getCartDataFromLS";
 
-const treeCartTotalElem = document.querySelector(".treeCartTotalElem");
-const treeSubTotal = document.querySelector("#treeSubTotal");
-const treeTax = document.querySelector("#treeTax");
-const treeFinalTotal = document.querySelector("#treeFinalTotal");
+export const calculateCartTotal = (cartSection) => {
+    if(cartSection){
+        const treeCartTotalElem = cartSection.querySelector(".treeCartTotalElem");
+        const treeSubTotal = cartSection.querySelector(".treeSubTotal");
+        const treeTax = cartSection.querySelector(".treeTax");
+        const treeFinalTotal = cartSection.querySelector(".treeFinalTotal");
 
-export const calculateCartTotal = () => {
-    const cartsDataLS = getCartDataFromLS();
+        const cartsDataLS = getCartDataFromLS();
 
-    if(cartsDataLS.length > 0){
-        const subTotal = cartsDataLS.reduce((acc, curElem) => {
-            return acc + curElem.price * curElem.quantity;
-        }, 0);
+        if(cartsDataLS.length > 0){
+            const subTotal = cartsDataLS.reduce((acc, curElem) => {
+                return acc + curElem.price * curElem.quantity;
+            }, 0);
 
-        const tax = parseInt(treeTax.textContent.slice(1));
-        treeSubTotal.textContent = `৳${subTotal}`;
-        treeFinalTotal.textContent = `৳${subTotal + tax}`;
+            const tax = parseInt(treeTax.textContent.slice(1));
+            treeSubTotal.textContent = `৳${subTotal}`;
+            treeFinalTotal.textContent = `৳${subTotal + tax}`;
 
-        treeCartTotalElem.classList.remove("hidden");
-    }
-    else{
-        treeCartTotalElem.classList.add("hidden");
+            treeCartTotalElem.classList.remove("hidden");
+        }
+        else{
+            treeCartTotalElem.classList.add("hidden");
+        }
     }
 };

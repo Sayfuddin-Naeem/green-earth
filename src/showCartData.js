@@ -2,15 +2,26 @@ import { calculateCartTotal } from "./calculateCartTotal";
 import { getCartDataFromLS } from "./getCartDataFromLS";
 import { removeCart } from "./removeCart";
 
+const mobileCartSection = document.querySelector("#cartSection-m");
+const mobileCartElemContainer = document.querySelector("#cartElemContainer-m");
 const cartSection = document.querySelector("#cartSection");
 const cartElemContainer = document.querySelector("#cartElemContainer");
 const cartElemTemplate = document.querySelector("#cartElemTemplate");
+
+const mediaQuery = window.matchMedia("(min-width: 768px)");
 
 export const showCartData = () => {
     const spinLoader = document.createElement('span');
     spinLoader.className = "loading loading-spinner loading-xl my-8";
     cartElemContainer.innerHTML = "";
-    cartSection.insertBefore(spinLoader, cartElemContainer);
+    mobileCartElemContainer.innerHTML = "";
+
+    if(mediaQuery.matches){
+        cartSection.insertBefore(spinLoader, cartElemContainer);
+    }
+    else{
+        mobileCartSection.insertBefore(spinLoader, mobileCartElemContainer);
+    }
 
     const cartsDataLS = getCartDataFromLS();
 
@@ -28,14 +39,29 @@ export const showCartData = () => {
                 cloneCartElem.querySelector(".cartElemQuantity").textContent = quantity;
 
                 cloneCartElem.querySelector(".cartElemClose").addEventListener("click", (ev) => {
-                    removeCart(ev, id);
+                    if(mediaQuery.matches){
+                        removeCart(ev, id, cartSection);
+                    }
+                    else{
+                        removeCart(ev, id, mobileCartSection);
+                    }
                 });
 
                 spinLoader.remove();
-                cartElemContainer.append(cloneCartElem);
+                
+                if(mediaQuery.matches){
+                    cartElemContainer.append(cloneCartElem);
+                }else{
+                    mobileCartElemContainer.append(cloneCartElem);
+                }
             }
         });
-        calculateCartTotal();
+
+        if(mediaQuery.matches){
+            calculateCartTotal(cartSection);
+        }else{
+            calculateCartTotal(mobileCartSection);
+        }
 
         return true;
     }

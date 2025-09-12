@@ -7,6 +7,7 @@ const mediaQuery = window.matchMedia("(min-width: 768px)");
 
 mediaQuery.addEventListener("change", () => {
   showCategory();
+  showCartData();
 });
 
 showCategory();

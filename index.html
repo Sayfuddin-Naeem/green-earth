@@ -113,29 +113,73 @@
         Choose Your Trees
       </h2>
       <div class="grid grid-cols-1 lg:grid-cols-[1fr_4fr_1fr] gap-6">
-        <!-- ========== Start category Section ========== -->
 
         <!-- ========== Start for mobile Section ========== -->
         
-        <div class="lg:hidden px-[7.04%]">
+        <div class="lg:hidden px-[7.04%] flex flex-col gap-6">
+          <!-- ========== Start mobile category Section ========== -->
+          
           <div class="collapse collapse-arrow border border-base-300 bg-base-100">
             <input type="checkbox" class="peer" />
             <div class="collapse-title text-[1.6rem] font-semibold">
               Select a Category
             </div>
             <div class="collapse-content">
-              <aside id="categorySection-m" class="">
-                <h3 class="text-black font-semibold text-[1.8rem] lg:text-[2rem]  mb-6.5">Categories</h3>
+              <aside id="categorySection-m" class="mt-12">
+                
                 <ul id="categoryContainer-m" class="flex flex-col gap-8">
                               
                 </ul>
               </aside>
             </div>
           </div>
+          
+          <!-- ========== End mobile category Section ========== -->
+
+          <!-- ========== Start mobile add to cart Section ========== -->
+          
+          <div class="collapse collapse-arrow border border-base-300 bg-base-100">
+            <input type="checkbox" class="peer" />
+            <div class="collapse-title text-[1.6rem] font-semibold">
+              See Your Cart
+            </div>
+            <div class="collapse-content">
+              <aside class="">
+                <div id="cartSection-m" class="flex flex-col items-center bg-white rounded-[1.6rem] p-[1.6rem]">
+                  <div id="cartElemContainer-m" class="w-full flex flex-col gap-4">
+                    
+                  </div>
+
+                  <!-- tree cart total calculation  -->
+                  <section class="treeCartTotalElem w-full mt-6 hidden">
+                    <div class="treeOrderTotal">
+                      <div class="flex justify-between gap-4 mb-3">
+                          <p class="text-dark-02 text-[1.4rem]">Sub Total:</p>
+                          <p class="treeSubTotal text-dark-02 text-[1.4rem]"></p>
+                      </div>
+                      <div class="flex justify-between gap-4">
+                          <p class="text-dark-02 text-[1.4rem]">Tax:</p>
+                          <p class="treeTax text-dark-02 text-[1.4rem]">৳50</p>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="flex justify-between gap-4 mt-0">
+                          <p class="text-dark-02 text-[1.4rem]">Total:</p>
+                          <p class="treeFinalTotal text-dark-02 text-[1.4rem]"></p>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </aside>
+            </div>
+          </div>
+          
+          <!-- ========== End mobile add to cart Section ========== -->
 
         </div>
         
         <!-- ========== End for mobile Section ========== -->
+
+        <!-- ========== Start category Section ========== -->
         
         <aside id="categorySection" class="hidden lg:block">
           <h3 class="text-black font-semibold text-[1.8rem] lg:text-[2rem]  mb-6.5">Categories</h3>
@@ -202,27 +246,27 @@
         <!-- ========== Start add to cart Section ========== -->
         
         <aside class="hidden lg:block">
-          <div id="cartSection" class="flex flex-col items-center bg-white rounded-[1.6rem] p-[1.6rem]">
+          <div id="cartSection" class="w-full flex flex-col items-center bg-white rounded-[1.6rem] p-[1.6rem]">
             <h3 class="text-black font-semibold text-[1.8rem] lg:text-[2rem]  mb-6.5">Your Cart</h3>
-            <div id="cartElemContainer" class="flex flex-col gap-4">
+            <div id="cartElemContainer" class="w-full flex flex-col gap-4">
               
             </div>
 
             <!-- tree cart total calculation  -->
-            <section class="treeCartTotalElem hidden mt-6 ">
+            <section class="treeCartTotalElem w-full hidden mt-6 ">
               <div class="treeOrderTotal">
                 <div class="flex justify-between gap-4 mb-3">
                     <p class="text-dark-02 text-[1.4rem]">Sub Total:</p>
-                    <p id="treeSubTotal" class="text-dark-02 text-[1.4rem]"></p>
+                    <p class="treeSubTotal text-dark-02 text-[1.4rem]"></p>
                 </div>
                 <div class="flex justify-between gap-4">
                     <p class="text-dark-02 text-[1.4rem]">Tax:</p>
-                    <p id="treeTax" class="text-dark-02 text-[1.4rem]">৳50</p>
+                    <p class="treeTax text-dark-02 text-[1.4rem]">৳50</p>
                 </div>
                 <div class="divider"></div>
                 <div class="flex justify-between gap-4 mt-0">
                     <p class="text-dark-02 text-[1.4rem]">Total:</p>
-                    <p id="treeFinalTotal" class="text-dark-02 text-[1.4rem]"></p>
+                    <p class="treeFinalTotal text-dark-02 text-[1.4rem]"></p>
                 </div>
               </div>
             </section>
@@ -233,7 +277,7 @@
         
         <template id="cartElemTemplate">
           <div id="cartElemValue" class="bg-bg-body w-full px-[1.2rem] py-[0.8rem] rounded-[0.8rem] flex justify-between items-center">
-            <div class="">
+            <div class="flex flex-col gap-6">
               <h3 class="treeTitle text-[1.4rem] font-semibold"></h3>
               <p class="text-dark-03">
                 ৳<span class="cartElemPrice text-dark-03"></span> x <span class="cartElemQuantity text-dark-03"></span>

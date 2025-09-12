@@ -2,7 +2,7 @@ import { calculateCartTotal } from "./calculateCartTotal";
 import { getCartDataFromLS } from "./getCartDataFromLS";
 import { setCartDataToLS } from "./setCartDataToLS";
 
-export const removeCart = (ev, id) => {
+export const removeCart = (ev, id, cartSection) => {
     const targetCartElem = document.querySelector(`#treeCart-${id}`);
     let cartDataLS = getCartDataFromLS();
 
@@ -11,7 +11,7 @@ export const removeCart = (ev, id) => {
         setCartDataToLS(cartDataLS);
 
         targetCartElem.remove();
-        calculateCartTotal();
+        calculateCartTotal(cartSection);
         
         return true;
     }

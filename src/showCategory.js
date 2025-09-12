@@ -62,13 +62,12 @@ export const showCategory = async () => {
             }
         });
 
+        mobileCatContainer.addEventListener('click', (ev) => {
+            showCategoryWiseTree(ev, mobileCatContainer);
+        });
+        
         categoryContainer.addEventListener('click', (ev) => {
-            
-            if(mediaQuery.matches){
-                showCategoryWiseTree(ev, categoryContainer);
-            }else{
-                showCategoryWiseTree(ev, mobileCatContainer);
-            }
+            showCategoryWiseTree(ev, categoryContainer);
         });
 
         return true;
